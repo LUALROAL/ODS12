@@ -17,7 +17,7 @@ import { VerProductoRecicladosPage } from '../pages/ver-producto-reciclados/ver-
 
 import { UsuarioServiceProvider } from '../providers/usuario-service/usuario-service';
 import { HttpClientModule } from '@angular/common/http';
-import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 @NgModule({
   declarations: [
     MyApp,
