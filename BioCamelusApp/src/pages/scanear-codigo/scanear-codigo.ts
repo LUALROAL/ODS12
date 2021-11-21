@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the ScanearCodigoPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
@@ -15,11 +11,36 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ScanearCodigoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private barcodeScanner: BarcodeScanner) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ScanearCodigoPage');
+  }
+
+  datocodificado: any;
+  datoscaneado: {};
+
+
+  LeerCode() {
+    this.barcodeScanner.scan().then(barcodeData => {
+      this.datoscaneado = barcodeData;
+      console.log('Barcode data', barcodeData);
+    })
+      .catch(err => {
+        console.log("Error", err);
+      });
+  }
+
+  CodificarTexto() {
+    this.barcodeScanner.encode(this.barcodeScanner.Encode.TEXT_TYPE, this.datocodificado).then(
+      encodedData => {
+        this.datocodificado = encodedData;
+      },
+      err => {
+        console.log("Un error ha ocurrido: " + err);
+      }
+    );
   }
 
 }

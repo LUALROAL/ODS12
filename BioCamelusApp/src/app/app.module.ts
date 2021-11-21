@@ -15,6 +15,9 @@ import { ProductoRegistradoPage } from '../pages/producto-registrado/producto-re
 import { VerProductoRecicladosPageModule } from '../pages/ver-producto-reciclados/ver-producto-reciclados.module';
 import { VerProductoRecicladosPage } from '../pages/ver-producto-reciclados/ver-producto-reciclados';
 
+import { UsuarioServiceProvider } from '../providers/usuario-service/usuario-service';
+import { HttpClientModule } from '@angular/common/http';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 @NgModule({
   declarations: [
     MyApp,
@@ -31,6 +34,7 @@ import { VerProductoRecicladosPage } from '../pages/ver-producto-reciclados/ver-
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -46,7 +50,10 @@ import { VerProductoRecicladosPage } from '../pages/ver-producto-reciclados/ver-
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+
+    UsuarioServiceProvider,
+    BarcodeScanner
   ]
 })
 export class AppModule {}
