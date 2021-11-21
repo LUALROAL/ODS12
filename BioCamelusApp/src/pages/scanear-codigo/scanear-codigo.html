@@ -14,7 +14,22 @@
 </ion-header>
 
 <ion-content padding>
+  <div style="padding: 10px">
 
+    <!--CODIFICAR-->
+    <!-- <ion-input type="text" placeholder="Digite su texto" [(ngModel)]="datocodificado"></ion-input> -->
+    <!-- <button ion-button color="primary" expand="block" (click)="CodificarTexto()">Nuevo Codigo</button> -->
+
+    <br>
+
+    <!--SCANNEAR-->
+    <button ion-button expand="block" color="primary" (click)="LeerCode()">Scannear Código</button>
+
+    <div *ngIf="datoscaneado">
+      <p>
+        Contenido obtenido: <b>{{ datoscaneado["text"] }}</b>
+      </p>
+    </div>
+
+  </div>
 </ion-content>
-
-

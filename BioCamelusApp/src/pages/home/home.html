@@ -15,4 +15,17 @@
   </p>
 
   <button ion-button secondary menuToggle>Toggle Menu</button>
+
+  <ion-list>
+    <button ion-item *ngFor="let item of usuarios" (click)="itemTapped($event, item)">
+      <!-- <ion-icon [name]="item.id" item-start></ion-icon> -->
+      {{item.id}}-{{item.name}}
+      <div class="item-note" item-end>
+        {{item.email}}
+      </div>
+    </button>
+  </ion-list>
+
+
+
 </ion-content>
