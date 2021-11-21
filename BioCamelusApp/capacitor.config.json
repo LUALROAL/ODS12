@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "BioCamelusApp",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
