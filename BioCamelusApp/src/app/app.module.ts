@@ -51,6 +51,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+
     UsuarioServiceProvider,
     BarcodeScanner
   ]

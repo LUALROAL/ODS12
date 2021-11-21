@@ -25,6 +25,7 @@ export class ScanearCodigoPage {
   LeerCode() {
     this.barcodeScanner.scan().then(barcodeData => {
       this.datoscaneado = barcodeData;
+      console.log('Barcode data', barcodeData);
     })
       .catch(err => {
         console.log("Error", err);
