@@ -28,9 +28,12 @@ public class UsuarioEntity {
     }
 
 
+
+
     public int getId() {
         return id;
     }
+
 
 
 
@@ -40,9 +43,11 @@ public class UsuarioEntity {
 
 
 
+
     public String getNombre() {
         return nombre;
     }
+
 
 
 
@@ -52,9 +57,11 @@ public class UsuarioEntity {
 
 
 
+
     public String getApellido() {
         return apellido;
     }
+
 
 
 
@@ -64,9 +71,11 @@ public class UsuarioEntity {
 
 
 
+
     public int getCamellosAcumulados() {
         return camellosAcumulados;
     }
+
 
 
 
@@ -76,20 +85,12 @@ public class UsuarioEntity {
 
 
 
-    public int getresiduosReciclados() {
-        return totalResiduo;
-    }
-
-
-
-    public void setRes(int totalResiduo) {
-        this.totalResiduo = totalResiduo;
-    }
-
 
     public int getTotalResiduo() {
         return totalResiduo;
     }
+
+
 
 
     public void setTotalResiduo(int totalResiduo) {
@@ -97,9 +98,13 @@ public class UsuarioEntity {
     }
 
 
+
+
     public int getResiduoValidado() {
         return residuoValidado;
     }
+
+
 
 
     public void setResiduoValidado(int residuoValidado) {
@@ -107,17 +112,19 @@ public class UsuarioEntity {
     }
 
 
+
+
     public int getPendientesPorValidar() {
         return PendientesPorValidar;
     }
+
+
 
 
     public void setPendientesPorValidar(int pendientesPorValidar) {
         PendientesPorValidar = pendientesPorValidar;
     }
 
-
-    
 
    
   

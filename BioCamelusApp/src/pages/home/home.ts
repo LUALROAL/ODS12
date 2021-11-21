@@ -21,7 +21,7 @@ export class HomePage {
 
   async getUsuarios() {
 
-    this.usuarios = await this.usuarioServiceProvider.getAllAsync();
+    this.usuarios = await this.usuarioServiceProvider.getById(1);
 
   }
   itemTapped(event, item) {
